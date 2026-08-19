@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Thợ Web — Làm website cho người Việt</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/editorial-project-card.css" />
+        <link rel="stylesheet" href="css/zalo-widget.css" />
+        <style>
+            .hero h1 i,
+            .heading h2 i,
+            .contact h2 i,
+            .projects strong i {
+                font-family: "Be Vietnam Pro", Arial, sans-serif;
+                font-style: italic;
+                font-weight: 600;
+            }
+            .prices article {
+                display: flex;
+                flex-direction: column;
+            }
+            .prices .benefits-title {
+                margin: 24px 0 10px;
+                color: #ddd;
+                font-size: 10px;
+                font-weight: 900;
+                line-height: 1.4;
+                letter-spacing: 0.08em;
+            }
+            .prices .hot .benefits-title {
+                color: #111;
+            }
+            .prices .benefits-list {
+                margin: 0 0 24px;
+            }
+            .prices .benefits-list li {
+                display: grid;
+                grid-template-columns: 22px minmax(0, 1fr);
+                gap: 8px;
+                align-items: start;
+                padding: 10px 0;
+                line-height: 1.45;
+            }
+            .prices .benefits-list li::before {
+                content: none;
+            }
+            .prices .hot .benefits-list li {
+                border-color: rgba(17, 17, 17, 0.2);
+            }
+            .prices .benefit-icon {
+                font-size: 14px;
+                line-height: 1.1;
+                text-align: center;
+            }
+            .prices article > .btn {
+                align-self: flex-start;
+                margin-top: auto;
+                transition: background-color 0.2s ease, color 0.2s ease;
+            }
+            .prices article > .btn:hover,
+            .prices article > .btn:focus-visible {
+                background: #fff;
+                color: #111;
+            }
+            .business-benefits {
+                padding: 105px 0;
+                background: var(--red);
+                color: #fff;
+                border-top: 3px solid #111;
+            }
+            .business-benefits .heading p {
+                max-width: 430px;
+                color: #ffe1de;
+            }
+            .business-benefits-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                border-top: 2px solid rgba(255, 255, 255, 0.55);
+                border-left: 2px solid rgba(255, 255, 255, 0.55);
+            }
+            .business-benefit {
+                min-height: 220px;
+                padding: 28px;
+                border-right: 2px solid rgba(255, 255, 255, 0.55);
+                border-bottom: 2px solid rgba(255, 255, 255, 0.55);
+            }
+            .business-benefit-top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .business-benefit-top b {
+                font-size: 9px;
+                letter-spacing: 0.12em;
+            }
+            .business-benefit-top span {
+                font-size: 26px;
+                line-height: 1;
+            }
+            .business-benefit h3 {
+                margin: 32px 0 8px;
+                font-size: 17px;
+                line-height: 1.35;
+            }
+            .business-benefit p {
+                margin: 0;
+                color: #ffe1de;
+                font-size: 10px;
+            }
+            .business-benefit.featured {
+                background: var(--yellow);
+                color: #111;
+            }
+            .business-benefit.featured p {
+                color: #625b32;
+            }
+            @media (max-width: 900px) {
+                .business-benefits-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media (max-width: 600px) {
+                .business-benefits {
+                    padding: 75px 0;
+                }
+                .business-benefits-grid {
+                    grid-template-columns: 1fr;
+                }
+                .business-benefit {
+                    min-height: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="wrap nav">
+                <a class="logo" href="#"
+                    ><b>TW</b><span>THỢ<span>WEB</span></span></a
+                ><button class="menu">☰</button>
+                <nav>
+                    <a href="#dichvu">Dịch vụ</a><a href="#goi">Gói làm web</a><a href="#duan">Web đã làm</a
+                    ><a href="#loiich">Lợi ích website</a><a href="#lienhe">Liên hệ</a>
+                </nav>
+                <a class="btn red" href="tel:0969516425">☎ Gọi thợ</a>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="gridbg"></div>
+            <div class="wrap heroGrid">
+                <div class="reveal">
+                    <small class="tag">● THỢ WEB — NHẬN LÀM WEBSITE</small>
+                    <h1>
+                        Cần làm website?<br /><strong>Gọi <i>Thợ Web.</i></strong>
+                    </h1>
+                    <p>
+                        Không cần biết công nghệ. Bạn chỉ cần nói mình đang kinh doanh gì — Thợ Web lo website từ
+                        <b>A đến Z.</b>
+                    </p>
+                    <div class="actions">
+                        <a class="btn red big" href="#goi">Xem giá làm web →</a
+                        ><a class="btn white big" href="tel:0969516425">☎ 0969 516 425</a>
+                    </div>
+                    <div class="promise">
+                        <span>✓ Giá rõ ràng</span><span>✓ Làm theo yêu cầu</span><span>✓ Có người hỗ trợ</span>
+                    </div>
+                </div>
+                <div class="scene reveal">
+                    <div class="box">
+                        <div class="boxhead"><b>THỢ WEB</b><b>01</b></div>
+                        <div class="tools">🔧　🔨　💻　<span>&lt;/&gt;</span></div>
+                        <div class="screen">
+                            <small>WEBSITE CỦA BẠN</small>
+                            <h2>Đẹp hơn.<br />Chuyên nghiệp hơn.</h2>
+                            <b>thoweb.vn</b>
+                        </div>
+                        <label>LÀM WEB<br /><strong>TỪ A → Z</strong></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="ticker">THỢ WEB　★　LÀM WEBSITE　★　CHO NGƯỜI VIỆT　★　GIÁ RÕ RÀNG　★　DỄ HIỂU　★　DỄ LÀM VIỆC</div>
+        <section class="section" id="dichvu">
+            <div class="wrap">
+                <div class="heading">
+                    <div>
+                        <small>01 / DỊCH VỤ</small>
+                        <h2>Thợ Web<br /><i>làm được gì?</i></h2>
+                    </div>
+                    <p>Từ cửa hàng nhỏ đến doanh nghiệp, chúng tôi làm website phù hợp với công việc thực tế.</p>
+                </div>
+                <div class="cards">
+                    <article>
+                        <b>🏪</b><small>01</small>
+                        <h3>Website giới thiệu</h3>
+                        <p>Giới thiệu doanh nghiệp, cửa hàng, dịch vụ và thông tin liên hệ.</p>
+                    </article>
+                    <article class="redcard">
+                        <b>🛒</b><small>02</small>
+                        <h3>Website bán hàng</h3>
+                        <p>Trưng bày sản phẩm, giá bán và hỗ trợ khách hàng đặt mua.</p>
+                    </article>
+                    <article>
+                        <b>📸</b><small>03</small>
+                        <h3>Web cho studio</h3>
+                        <p>Trưng bày album ảnh cưới, dịch vụ, bảng giá và hỗ trợ khách hàng đặt lịch.</p>
+                    </article>
+                    <!-- <article>
+                        <b>📣</b><small>03</small>
+                        <h3>Landing Page</h3>
+                        <p>Trang bán hàng hoặc giới thiệu một sản phẩm, dịch vụ cụ thể.</p>
+                    </article> -->
+                    <article>
+                        <b>🔧</b><small>04</small>
+                        <h3>Làm lại website</h3>
+                        <p>Website cũ khó dùng, xấu hoặc không tốt trên điện thoại? Làm lại.</p>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="dark section" id="goi">
+            <div class="wrap">
+                <div class="heading light">
+                    <div>
+                        <small>02 / BẢNG GIÁ</small>
+                        <h2>Chọn gói phù hợp.<br /><i>Không phải đoán giá.</i></h2>
+                    </div>
+                    <p>Giá tham khảo. Nói rõ nhu cầu, Thợ Web báo giá chính xác trước khi làm.</p>
+                </div>
+                <div class="prices">
+                    <article>
+                        <small>GÓI 01 / CƠ BẢN</small>
+                        <h3>Web giới thiệu</h3>
+                        <p>Cho cá nhân, cửa hàng và doanh nghiệp nhỏ.</p>
+                        <strong>4.900.000<em>đ</em></strong>
+                        <h4 class="benefits-title">KHÁCH HÀNG NHẬN ĐƯỢC</h4>
+                        <ul class="benefits-list">
+                            <li><span class="benefit-icon" aria-hidden="true">🌐</span><span>Website giới thiệu sản phẩm, dịch vụ và doanh nghiệp</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">📱</span><span>Hiển thị đẹp trên điện thoại, máy tính bảng và máy tính</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">📞</span><span>Gọi điện, Zalo và Facebook chỉ với một chạm</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🔎</span><span>Tối ưu SEO giúp website dễ được tìm thấy trên Google</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">📸</span><span>Chụp và chỉnh sửa ảnh phục vụ website</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🎁</span><span>Miễn phí tên miền .com và hosting trong năm đầu</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🛠️</span><span>Hỗ trợ chỉnh sửa website trong năm đầu</span></li>
+                        </ul>
+                        <a class="btn" href="web-basic.html">Xem chi tiết →</a>
+                    </article>
+                    <article>
+                        <small>GÓI 02 / BÁN HÀNG</small>
+                        <h3>Web cửa hàng</h3>
+                        <p>Cho shop, cửa hàng và hộ kinh doanh.</p>
+                        <strong>9.900.000<em>đ</em></strong>
+                        <h4 class="benefits-title">KHÁCH HÀNG NHẬN ĐƯỢC</h4>
+                        <ul class="benefits-list">
+                            <li><span class="benefit-icon" aria-hidden="true">🛒</span><span>Cửa hàng online hoàn chỉnh</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🛍️</span><span>Giỏ hàng & đặt hàng trực tuyến</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">📦</span><span>Tối ưu hiển thị trên điện thoại, máy tính bảng và máy tính</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">⚙️</span><span>Dễ dàng quản lý sản phẩm và nội dung</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🔎</span><span>Chuẩn SEO Google</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">📊</span><span>Thống kê lượt người truy cập, thời gian người dùng xem sản phẩm</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">📸</span><span>Chụp và chỉnh sửa ảnh phục vụ website</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🎁</span><span>Miễn phí tên miền .com/.vn và hosting trong năm đầu</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🛠️</span><span>Hỗ trợ thêm trang, thêm chức năng và chỉnh sửa trong năm đầu</span></li>
+                        </ul>
+                        <a class="btn black" href="web-store.html">Xem chi tiết →</a>
+                    </article>
+                    <article class="hot">
+                        <mark>NHIỀU NGƯỜI CHỌN</mark><small>GÓI 03 / STUDIO</small>
+                        <h3>Web Studio</h3>
+                        <p>Cho studio chụp ảnh cưới.</p>
+                        <strong>9.900.000<em>đ</em></strong>
+                        <h4 class="benefits-title">KHÁCH HÀNG NHẬN ĐƯỢC</h4>
+                        <ul class="benefits-list">
+                            <li><span class="benefit-icon" aria-hidden="true">📸</span><span>Website mang phong cách riêng của studio</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">💍</span><span>Album ảnh cưới đẹp, tối ưu hiển thị trên điện thoại</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">💌</span><span>Chức năng tạo thiệp mời online</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">💐</span><span>Giới thiệu các gói chụp &amp; dịch vụ cưới</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">👗</span><span>Váy cưới, vest, makeup &amp; các dịch vụ đi kèm</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">💰</span><span>Bảng giá &amp; chương trình khuyến mãi</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">📞</span><span>Gọi điện &amp; Zalo chỉ với một chạm</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">📍</span><span>Google Maps chỉ đường đến studio</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🔎</span><span>Chuẩn SEO Google</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">📊</span><span>Thống kê lượt người truy cập, thời gian người dùng xem sản phẩm</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">📱</span><span>Tối ưu điện thoại, máy tính bảng và máy tính</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">📸</span><span>Chụp và chỉnh sửa ảnh phục vụ website</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🎁</span><span>Miễn phí tên miền .com/.vn và hosting trong năm đầu</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🛠️</span><span>Hỗ trợ thêm trang, thêm chức năng và chỉnh sửa trong năm đầu</span></li>
+                        </ul>
+                        <a class="btn black" href="web-studio.html">Xem chi tiết →</a>
+                    </article>
+                    <!-- <article>
+                        <small>GÓI 03 / DOANH NGHIỆP</small>
+                        <h3>Web thương hiệu</h3>
+                        <p>Cho doanh nghiệp muốn hình ảnh chuyên nghiệp.</p>
+                        <strong>12.900.000<em>đ</em></strong>
+                        <ul>
+                            <li>Thiết kế giao diện riêng</li>
+                            <li>Nhiều trang nội dung</li>
+                            <li>Hiệu ứng & chuyển động</li>
+                            <li>SEO & tốc độ</li>
+                            <li>Công cụ đo lường</li>
+                            <li>Hỗ trợ sau bàn giao</li>
+                        </ul>
+                        <a class="btn white" href="#lienhe">Hỏi về gói này →</a>
+                    </article> -->
+                </div>
+                <small class="note"
+                    >* Có thể làm website theo yêu cầu riêng, không nhất thiết chọn đúng 3 gói trên.</small
+                >
+            </div>
+        </section>
+        <section class="section" id="duan">
+            <div class="wrap">
+                <div class="heading">
+                    <div>
+                        <small>03 / WEB ĐÃ LÀM</small>
+                        <h2>Một vài website<br /><i>Thợ Web đã làm.</i></h2>
+                    </div>
+                    <p>Có thể thay các mẫu dưới đây bằng dự án thực tế của bạn.</p>
+                </div>
+                <div class="projects">
+                    <article class="p1">
+                        <span>01 / BEAUTY</span><strong>AN NHIÊN<br /><i>Beauty</i></strong
+                        ><small>WEBSITE GIỚI THIỆU</small>
+                    </article>
+                    <article class="p2">
+                        <span>02 / F&B</span><strong>MỘC<br />COFFEE</strong><small>WEBSITE CỬA HÀNG</small>
+                    </article>
+                    <article class="p3">
+                        <span>03 / BUSINESS</span><strong>NỘI THẤT<br />MINH GIA</strong
+                        ><small>WEBSITE DOANH NGHIỆP</small>
+                    </article>
+                    <a class="p4" href="wedding-studio-editorial.html" target="_blank" rel="noopener">
+                        <span>04 / WEDDING STUDIO</span>
+                        <strong>MỘC MIÊN<br /><i>Wedding Atelier</i></strong>
+                        <small>XEM WEBSITE DEMO EDITORIAL ↗</small>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="business-benefits" id="loiich">
+            <div class="wrap">
+                <div class="heading">
+                    <div>
+                        <small>04 / VÌ SAO CẦN WEBSITE?</small>
+                        <h2>Vì sao hộ kinh doanh<br />&amp; doanh nghiệp <i>cần website?</i></h2>
+                    </div>
+                    <p>
+                        Website không chỉ để giới thiệu. Đây là nơi giúp khách hàng tìm thấy, tin tưởng và dễ dàng
+                        liên hệ với bạn.
+                    </p>
+                </div>
+                <div class="business-benefits-grid">
+                    <article class="business-benefit">
+                        <div class="business-benefit-top"><b>01</b><span aria-hidden="true">🔎</span></div>
+                        <h3>Dễ được tìm thấy trên Google</h3>
+                        <p>Khách hàng có thể tìm thấy sản phẩm, dịch vụ và thông tin doanh nghiệp khi có nhu cầu.</p>
+                    </article>
+                    <article class="business-benefit">
+                        <div class="business-benefit-top"><b>02</b><span aria-hidden="true">🤝</span></div>
+                        <h3>Tăng uy tín và sự chuyên nghiệp</h3>
+                        <p>Một website chỉn chu giúp khách hàng yên tâm hơn trước khi mua hàng hoặc sử dụng dịch vụ.</p>
+                    </article>
+                    <article class="business-benefit">
+                        <div class="business-benefit-top"><b>03</b><span aria-hidden="true">🕐</span></div>
+                        <h3>Hoạt động 24/7</h3>
+                        <p>Website liên tục giới thiệu sản phẩm, dịch vụ, bảng giá và tiếp nhận nhu cầu ngay cả ngoài giờ làm việc.</p>
+                    </article>
+                    <article class="business-benefit">
+                        <div class="business-benefit-top"><b>04</b><span aria-hidden="true">📞</span></div>
+                        <h3>Tăng cơ hội có khách hàng mới</h3>
+                        <p>Các nút gọi điện, Zalo, form liên hệ và đặt lịch giúp khách hàng hành động nhanh chóng.</p>
+                    </article>
+                    <article class="business-benefit featured">
+                        <div class="business-benefit-top"><b>05</b><span aria-hidden="true">🏠</span></div>
+                        <h3>Có kênh kinh doanh của riêng mình</h3>
+                        <p>Chủ động nội dung và hình ảnh thương hiệu, không phụ thuộc hoàn toàn vào mạng xã hội hay sàn thương mại điện tử.</p>
+                    </article>
+                    <article class="business-benefit">
+                        <div class="business-benefit-top"><b>06</b><span aria-hidden="true">📣</span></div>
+                        <h3>Hỗ trợ quảng cáo hiệu quả hơn</h3>
+                        <p>Có trang đích rõ ràng để chạy quảng cáo, giới thiệu chương trình khuyến mãi và sản phẩm nổi bật.</p>
+                    </article>
+                    <article class="business-benefit">
+                        <div class="business-benefit-top"><b>07</b><span aria-hidden="true">📊</span></div>
+                        <h3>Biết khách hàng quan tâm điều gì</h3>
+                        <p>Google Analytics giúp theo dõi lượt truy cập, nguồn khách hàng và những nội dung được quan tâm.</p>
+                    </article>
+                    <article class="business-benefit">
+                        <div class="business-benefit-top"><b>08</b><span aria-hidden="true">💬</span></div>
+                        <h3>Tiết kiệm thời gian tư vấn</h3>
+                        <p>Thông tin sản phẩm, dịch vụ, bảng giá và câu hỏi thường gặp được trình bày sẵn để khách hàng tự tìm hiểu.</p>
+                    </article>
+                    <article class="business-benefit">
+                        <div class="business-benefit-top"><b>09</b><span aria-hidden="true">🚀</span></div>
+                        <h3>Mở rộng thị trường</h3>
+                        <p>Tiếp cận khách hàng ngoài khu vực đang kinh doanh và tạo thêm cơ hội tăng doanh thu.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="lienhe">
+            <div class="wrap contactBox">
+                <div>
+                    <small>05 / LIÊN HỆ</small>
+                    <h2>Có việc cần làm web?<br /><i>Gọi Thợ Web.</i></h2>
+                    <p>Nhắn nhu cầu của bạn. Thợ Web sẽ trao đổi và báo giá phù hợp.</p>
+                </div>
+                <div>
+                    <a class="btn red big" href="tel:0969516425">☎ 0969 516 425</a
+                    ><a class="btn black big" href="mailto:hello@thoweb.vn">✉ hello@thoweb.vn</a>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="wrap foot">
+                <div class="logo">
+                    <b>TW</b><span>THỢ<span>WEB</span></span>
+                </div>
+                <p>Website không chỉ là trang web mà còn là bộ mặt của thương hiệu<br />trên không gian mạng.</p>
+                <div><a href="#goi">Gói làm web</a>　<a href="#duan">Web đã làm</a>　<a href="#lienhe">Liên hệ</a></div>
+            </div>
+            <div class="wrap bottom">© 2026 Thợ Web — thoweb.vn</div>
+        </footer>
+        <a
+            class="zalo-float"
+            href="https://zalo.me/0969516425"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Nhắn Zalo cho Thợ Web qua số 0969 516 425"
+            title="Nhắn Zalo cho Thợ Web"
+        >
+            <span class="zalo-icon" aria-hidden="true">Zalo</span>
+            <span class="zalo-tooltip" aria-hidden="true">Chat Zalo</span>
+        </a>
+        <script src="js/script.js"></script>
+    </body>
+</html>
