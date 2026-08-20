@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content="#3f171f" />
+        <meta
+            name="description"
+            content="Album ảnh cưới riêng tư của Minh và An, được thực hiện bởi Mộc Miên Wedding Atelier."
+        />
+        <meta property="og:title" content="Minh & An — Private Wedding Gallery" />
+        <meta property="og:description" content="Những khoảnh khắc đẹp nhất trong ngày của Minh và An đã sẵn sàng." />
+        <meta property="og:image" content="editorial-assets/hero.jpg" />
+        <title>Minh &amp; An | Private Wedding Gallery</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/album-anh-online.css" />
+        <script src="js/album-anh-online.js" defer></script>
+    </head>
+    <body class="album-locked">
+        <section class="access-gate" id="access-gate" aria-labelledby="access-title">
+            <div class="access-gate__media" aria-hidden="true">
+                <img src="editorial-assets/hero.jpg" alt="" fetchpriority="high" />
+            </div>
+            <div class="access-gate__veil"></div>
+            <div class="access-gate__pattern" aria-hidden="true"></div>
+            <div class="access-gate__brand">
+                <span class="brand-mark">M</span>
+                <span><strong>MỘC MIÊN</strong><small>WEDDING ATELIER</small></span>
+            </div>
+            <div class="access-gate__panel">
+                <p class="eyebrow eyebrow--gold">Private wedding gallery</p>
+                <div class="access-monogram" aria-hidden="true"><span>M</span><i></i><span>A</span></div>
+                <h1 id="access-title">Minh <em>&amp;</em> An</h1>
+                <p>Album này được bảo vệ để những khoảnh khắc riêng tư luôn thuộc về bạn.</p>
+                <form class="access-form" id="access-form" novalidate>
+                    <label for="album-pin">Mã truy cập</label>
+                    <div class="access-form__row">
+                        <input
+                            id="album-pin"
+                            name="pin"
+                            type="password"
+                            inputmode="numeric"
+                            pattern="[0-9]*"
+                            maxlength="4"
+                            placeholder="••••"
+                            autocomplete="one-time-code"
+                            aria-describedby="pin-hint pin-error"
+                            required
+                        />
+                        <button type="submit" aria-label="Mở album">
+                            <span>Mở album</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5" /></svg>
+                        </button>
+                    </div>
+                    <small id="pin-hint">Mã xem bản demo: <strong>1808</strong></small>
+                    <p id="pin-error" class="access-form__error" role="alert"></p>
+                </form>
+            </div>
+            <p class="access-gate__edition">Album No. 1808 · 2026</p>
+        </section>
+
+        <div class="album-app" id="album-app" aria-hidden="true">
+            <header class="album-header" id="album-header">
+                <a class="studio-brand" href="#top" aria-label="Mộc Miên Wedding Atelier — về đầu album">
+                    <span class="brand-mark">M</span>
+                    <span><strong>MỘC MIÊN</strong><small>WEDDING ATELIER</small></span>
+                </a>
+                <div class="album-header__meta" aria-label="Tên album"><span>Private gallery</span><strong>MINH &amp; AN</strong></div>
+                <nav class="album-header__actions" aria-label="Công cụ album">
+                    <button type="button" data-share-album>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5" /><circle cx="6" cy="12" r="2.5" /><circle cx="18" cy="19" r="2.5" /><path d="m8.2 10.8 7.5-4.4M8.2 13.2l7.5 4.4" /></svg>
+                        <span>Chia sẻ</span>
+                    </button>
+                    <button type="button" data-open-download>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 18v3h16v-3" /></svg>
+                        <span>Tải ảnh</span>
+                    </button>
+                </nav>
+            </header>
+
+            <main>
+                <section class="album-hero" id="top">
+                    <div class="album-hero__media" aria-hidden="true">
+                        <img src="editorial-assets/hero.jpg" alt="" fetchpriority="high" />
+                    </div>
+                    <div class="album-hero__veil"></div>
+                    <div class="album-hero__frame" aria-hidden="true"></div>
+                    <div class="album-hero__side-note" aria-hidden="true">MỘC MIÊN · PRIVATE ARCHIVE · 2026</div>
+                    <div class="album-hero__content reveal">
+                        <p class="eyebrow eyebrow--light">Private wedding gallery</p>
+                        <h1><span>Minh</span><em>&amp;</em><span>An</span></h1>
+                        <p class="album-hero__date">18 · 08 · 2026 <i></i> Sài Gòn</p>
+                        <p class="album-hero__intro">Những khoảnh khắc đẹp nhất trong ngày của Minh và An đã sẵn sàng.</p>
+                        <div class="album-hero__actions">
+                            <a class="primary-action" href="#gallery"><span>Xem album</span><b>↓</b></a>
+                            <button class="ghost-action" type="button" data-start-slideshow>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 7 8 5-8 5Z" /></svg><span>Trình chiếu</span>
+                            </button>
+                        </div>
+                    </div>
+                    <a class="album-hero__scroll" href="#album-summary" aria-label="Cuộn xuống thông tin album">
+                        <span>Khám phá album</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6" /></svg>
+                    </a>
+                </section>
+
+                <section class="album-summary paper-texture" id="album-summary" aria-label="Thông tin album">
+                    <div class="album-summary__intro reveal">
+                        <p class="eyebrow">The wedding archive</p>
+                        <blockquote>“Một ngày thật đẹp,<br />được kể lại bằng những khoảnh khắc chân thành.”</blockquote>
+                    </div>
+                    <div class="album-summary__stats reveal">
+                        <article><strong>156</strong><span>Ảnh đã chọn lọc</span></article>
+                        <article><strong>4K</strong><span>Ảnh gốc chất lượng cao</span></article>
+                        <article><strong>30</strong><span>Ngày lưu trữ trực tuyến</span></article>
+                    </div>
+                    <div class="album-summary__notice reveal">
+                        <span aria-hidden="true">✦</span>
+                        <p><strong>Album riêng tư.</strong> Chỉ những người có liên kết và mã truy cập mới có thể xem.</p>
+                    </div>
+                </section>
+
+                <section class="gallery-section" id="gallery">
+                    <div class="gallery-heading reveal">
+                        <div>
+                            <p class="eyebrow">Selected photographs</p>
+                            <h2>Những khoảnh khắc<br /><em>đáng nhớ.</em></h2>
+                        </div>
+                        <p>Chạm vào từng tấm ảnh để xem toàn màn hình, lưu ảnh yêu thích hoặc tải xuống.</p>
+                    </div>
+
+                    <div class="gallery-toolbar" id="gallery-toolbar">
+                        <div class="gallery-filters" role="group" aria-label="Lọc ảnh theo nội dung">
+                            <button class="is-active" type="button" data-filter="all" aria-pressed="true">Tất cả</button>
+                            <button type="button" data-filter="portrait" aria-pressed="false">Chân dung</button>
+                            <button type="button" data-filter="ceremony" aria-pressed="false">Ngày cưới</button>
+                            <button type="button" data-filter="outdoor" aria-pressed="false">Ngoại cảnh</button>
+                            <button type="button" data-filter="favorites" aria-pressed="false">Đã chọn <span data-favorite-count>0</span></button>
+                        </div>
+                        <div class="gallery-toolbar__actions">
+                            <span id="gallery-result-count">10 ảnh nổi bật</span>
+                            <button type="button" data-open-download aria-label="Mở lựa chọn tải ảnh">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 18v3h16v-3" /></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="gallery-grid" id="gallery-grid">
+                        <article class="gallery-item gallery-item--feature reveal" data-photo-id="MNA-001" data-category="portrait" data-src="editorial-assets/gallery-01.jpg" data-caption="Minh &amp; An · Chân dung ngày cưới">
+                            <button class="gallery-item__view" type="button" aria-label="Xem ảnh MNA-001">
+                                <img src="editorial-assets/gallery-01.jpg" alt="Chân dung cưới của Minh và An" loading="lazy" />
+                                <span class="gallery-item__index">01 / 10</span><span class="gallery-item__caption">Chân dung ngày cưới</span>
+                            </button>
+                            <button class="gallery-item__heart" type="button" aria-label="Chọn ảnh MNA-001" data-favorite-photo="MNA-001"><span>♡</span></button>
+                        </article>
+                        <article class="gallery-item gallery-item--portrait reveal" data-photo-id="MNA-002" data-category="portrait" data-src="editorial-assets/portrait-bride.jpg" data-caption="An · The bride">
+                            <button class="gallery-item__view" type="button" aria-label="Xem ảnh MNA-002">
+                                <img src="editorial-assets/portrait-bride.jpg" alt="Chân dung cô dâu An" loading="lazy" />
+                                <span class="gallery-item__index">02 / 10</span><span class="gallery-item__caption">The bride</span>
+                            </button>
+                            <button class="gallery-item__heart" type="button" aria-label="Chọn ảnh MNA-002" data-favorite-photo="MNA-002"><span>♡</span></button>
+                        </article>
+                        <article class="gallery-item gallery-item--portrait reveal" data-photo-id="MNA-003" data-category="portrait" data-src="editorial-assets/portrait-groom.jpg" data-caption="Minh · The groom">
+                            <button class="gallery-item__view" type="button" aria-label="Xem ảnh MNA-003">
+                                <img src="editorial-assets/portrait-groom.jpg" alt="Chân dung chú rể Minh" loading="lazy" />
+                                <span class="gallery-item__index">03 / 10</span><span class="gallery-item__caption">The groom</span>
+                            </button>
+                            <button class="gallery-item__heart" type="button" aria-label="Chọn ảnh MNA-003" data-favorite-photo="MNA-003"><span>♡</span></button>
+                        </article>
+                        <article class="gallery-item gallery-item--landscape reveal" data-photo-id="MNA-004" data-category="outdoor" data-src="editorial-assets/gallery-04.jpg" data-caption="Minh &amp; An · Khu vườn mùa hạ">
+                            <button class="gallery-item__view" type="button" aria-label="Xem ảnh MNA-004">
+                                <img src="editorial-assets/gallery-04.jpg" alt="Minh và An trong khu vườn" loading="lazy" />
+                                <span class="gallery-item__index">04 / 10</span><span class="gallery-item__caption">Khu vườn mùa hạ</span>
+                            </button>
+                            <button class="gallery-item__heart" type="button" aria-label="Chọn ảnh MNA-004" data-favorite-photo="MNA-004"><span>♡</span></button>
+                        </article>
+                        <article class="gallery-item gallery-item--square reveal" data-photo-id="MNA-005" data-category="ceremony" data-src="editorial-assets/gallery-02.jpg" data-caption="Minh &amp; An · Một ngày bên nhau">
+                            <button class="gallery-item__view" type="button" aria-label="Xem ảnh MNA-005">
+                                <img src="editorial-assets/gallery-02.jpg" alt="Minh và An trong ngày cưới" loading="lazy" />
+                                <span class="gallery-item__index">05 / 10</span><span class="gallery-item__caption">Một ngày bên nhau</span>
+                            </button>
+                            <button class="gallery-item__heart" type="button" aria-label="Chọn ảnh MNA-005" data-favorite-photo="MNA-005"><span>♡</span></button>
+                        </article>
+                        <article class="gallery-item gallery-item--square reveal" data-photo-id="MNA-006" data-category="ceremony" data-src="editorial-assets/gallery-03.jpg" data-caption="Minh &amp; An · Ánh nhìn đầu tiên">
+                            <button class="gallery-item__view" type="button" aria-label="Xem ảnh MNA-006">
+                                <img src="editorial-assets/gallery-03.jpg" alt="Khoảnh khắc ánh nhìn của cô dâu chú rể" loading="lazy" />
+                                <span class="gallery-item__index">06 / 10</span><span class="gallery-item__caption">Ánh nhìn đầu tiên</span>
+                            </button>
+                            <button class="gallery-item__heart" type="button" aria-label="Chọn ảnh MNA-006" data-favorite-photo="MNA-006"><span>♡</span></button>
+                        </article>
+                        <article class="gallery-item gallery-item--portrait reveal" data-photo-id="MNA-007" data-category="portrait" data-src="editorial-assets/gallery-05.jpg" data-caption="An · Dịu dàng trong nắng">
+                            <button class="gallery-item__view" type="button" aria-label="Xem ảnh MNA-007">
+                                <img src="editorial-assets/gallery-05.jpg" alt="Chân dung cô dâu trong ánh nắng" loading="lazy" />
+                                <span class="gallery-item__index">07 / 10</span><span class="gallery-item__caption">Dịu dàng trong nắng</span>
+                            </button>
+                            <button class="gallery-item__heart" type="button" aria-label="Chọn ảnh MNA-007" data-favorite-photo="MNA-007"><span>♡</span></button>
+                        </article>
+                        <article class="gallery-item gallery-item--feature reveal" data-photo-id="MNA-008" data-category="outdoor" data-src="editorial-assets/gallery-07.jpg" data-caption="Minh &amp; An · Chuyện của chúng mình">
+                            <button class="gallery-item__view" type="button" aria-label="Xem ảnh MNA-008">
+                                <img src="editorial-assets/gallery-07.jpg" alt="Minh và An trong bộ ảnh cưới ngoại cảnh" loading="lazy" />
+                                <span class="gallery-item__index">08 / 10</span><span class="gallery-item__caption">Chuyện của chúng mình</span>
+                            </button>
+                            <button class="gallery-item__heart" type="button" aria-label="Chọn ảnh MNA-008" data-favorite-photo="MNA-008"><span>♡</span></button>
+                        </article>
+                        <article class="gallery-item gallery-item--square reveal" data-photo-id="MNA-009" data-category="ceremony" data-src="editorial-assets/gallery-06.jpg" data-caption="Minh &amp; An · Khoảnh khắc bình yên">
+                            <button class="gallery-item__view" type="button" aria-label="Xem ảnh MNA-009">
+                                <img src="editorial-assets/gallery-06.jpg" alt="Khoảnh khắc bình yên của Minh và An" loading="lazy" />
+                                <span class="gallery-item__index">09 / 10</span><span class="gallery-item__caption">Khoảnh khắc bình yên</span>
+                            </button>
+                            <button class="gallery-item__heart" type="button" aria-label="Chọn ảnh MNA-009" data-favorite-photo="MNA-009"><span>♡</span></button>
+                        </article>
+                        <article class="gallery-item gallery-item--landscape reveal" data-photo-id="MNA-010" data-category="outdoor" data-src="editorial-assets/gallery-08.jpg" data-caption="Minh &amp; An · Hẹn nhau một đời">
+                            <button class="gallery-item__view" type="button" aria-label="Xem ảnh MNA-010">
+                                <img src="editorial-assets/gallery-08.jpg" alt="Ảnh cưới ngoại cảnh của Minh và An" loading="lazy" />
+                                <span class="gallery-item__index">10 / 10</span><span class="gallery-item__caption">Hẹn nhau một đời</span>
+                            </button>
+                            <button class="gallery-item__heart" type="button" aria-label="Chọn ảnh MNA-010" data-favorite-photo="MNA-010"><span>♡</span></button>
+                        </article>
+                    </div>
+                    <div class="gallery-empty" id="gallery-empty" hidden>
+                        <span>♡</span><h3>Chưa có ảnh được chọn</h3><p>Bấm biểu tượng trái tim trên ảnh để tạo danh sách yêu thích.</p>
+                    </div>
+                    <p class="gallery-end-note reveal"><span>10 ảnh nổi bật trong album</span><i></i><span>156 ảnh đã bàn giao</span></p>
+                </section>
+
+                <section class="studio-message paper-texture">
+                    <div class="studio-message__ornament reveal" aria-hidden="true"><span>M</span><i></i><span>A</span></div>
+                    <div class="studio-message__copy reveal">
+                        <p class="eyebrow">A note from Mộc Miên</p>
+                        <h2>Gửi Minh <em>&amp;</em> An,</h2>
+                        <blockquote>
+                            “Cảm ơn hai bạn đã tin tưởng để Mộc Miên lưu giữ ngày đặc biệt này. Chúc hai bạn luôn hạnh phúc và có thật nhiều kỷ niệm đẹp bên nhau.”
+                        </blockquote>
+                        <p>— Mộc Miên Wedding Atelier</p>
+                    </div>
+                    <div class="studio-message__guide reveal">
+                        <span>01</span><p><strong>Xem trọn vẹn</strong>Chạm vào ảnh để mở chế độ toàn màn hình.</p>
+                        <span>02</span><p><strong>Chọn yêu thích</strong>Bấm trái tim và gửi danh sách cho studio.</p>
+                        <span>03</span><p><strong>Lưu kỷ niệm</strong>Tải ảnh chất lượng cao bằng kết nối Wi-Fi.</p>
+                    </div>
+                </section>
+
+                <section class="download-banner">
+                    <div class="download-banner__media" aria-hidden="true"><img src="editorial-assets/gallery-02.jpg" alt="" loading="lazy" /></div>
+                    <div class="download-banner__veil"></div>
+                    <div class="download-banner__copy reveal">
+                        <p class="eyebrow eyebrow--gold">Your photographs are ready</p>
+                        <h2>Mang những khoảnh khắc<br /><em>về bên mình.</em></h2>
+                        <p>Ảnh chất lượng cao đã sẵn sàng để lưu trữ, chia sẻ và in ấn.</p>
+                        <button class="primary-action primary-action--gold" type="button" data-open-download><span>Tải album</span><b>↓</b></button>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="album-footer">
+                <div class="studio-brand studio-brand--footer">
+                    <span class="brand-mark">M</span>
+                    <span><strong>MỘC MIÊN</strong><small>WEDDING ATELIER</small></span>
+                </div>
+                <div class="album-footer__contact">
+                    <a href="tel:0969516425">0969 516 425</a><a href="#">Zalo</a><a href="#">Instagram</a><a href="#">Website</a>
+                </div>
+                <p>Album được thực hiện dành riêng cho Minh &amp; An.</p>
+                <a class="album-footer__credit" href="https://thoweb.vn" target="_blank" rel="noopener noreferrer"><span>Album online bởi</span><strong>thoweb.vn</strong></a>
+            </footer>
+        </div>
+
+        <div class="selection-tray" id="selection-tray" aria-hidden="true">
+            <div><span>Ảnh đã chọn</span><strong><b data-favorite-count>0</b> ảnh</strong></div>
+            <button type="button" data-show-favorites>Xem danh sách</button>
+            <button type="button" data-open-selection>Hoàn tất chọn ảnh <span>→</span></button>
+        </div>
+
+        <dialog class="lightbox" id="lightbox" aria-label="Xem ảnh cưới toàn màn hình">
+            <div class="lightbox__topbar">
+                <div><span id="lightbox-photo-id">MNA-001</span><strong id="lightbox-counter">01 / 10</strong></div>
+                <div>
+                    <button type="button" data-lightbox-favorite aria-label="Chọn ảnh yêu thích"><span>♡</span></button>
+                    <a id="lightbox-download" href="" download aria-label="Tải ảnh đang xem"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 18v3h16v-3" /></svg></a>
+                    <button type="button" data-close-lightbox aria-label="Đóng ảnh">×</button>
+                </div>
+            </div>
+            <button class="lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Ảnh trước">‹</button>
+            <figure><img id="lightbox-image" src="" alt="" /><figcaption id="lightbox-caption"></figcaption></figure>
+            <button class="lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Ảnh tiếp theo">›</button>
+            <div class="lightbox__progress"><i id="lightbox-progress"></i></div>
+        </dialog>
+
+        <dialog class="album-dialog download-dialog" id="download-dialog" aria-labelledby="download-title">
+            <button class="album-dialog__close" type="button" data-close-dialog aria-label="Đóng">×</button>
+            <p class="eyebrow">Download photographs</p>
+            <h2 id="download-title">Chọn chất lượng ảnh</h2>
+            <p class="album-dialog__lead">Bạn muốn sử dụng những bức ảnh này như thế nào?</p>
+            <div class="download-options">
+                <button type="button" data-download-option="share">
+                    <span>01</span><div><strong>Ảnh để chia sẻ</strong><p>Tối ưu cho Facebook, Zalo và điện thoại.</p><small>JPG · Khoảng 1800px</small></div><b>→</b>
+                </button>
+                <button type="button" data-download-option="original">
+                    <span>02</span><div><strong>Ảnh chất lượng cao</strong><p>Dành cho lưu trữ lâu dài và in ấn.</p><small>JPG · Độ phân giải gốc</small></div><b>→</b>
+                </button>
+                <button type="button" data-download-option="favorites">
+                    <span>03</span><div><strong>Ảnh đã chọn</strong><p>Tải riêng danh sách ảnh yêu thích.</p><small><b data-favorite-count>0</b> ảnh đang được chọn</small></div><b>→</b>
+                </button>
+            </div>
+            <p class="download-dialog__note">Album đầy đủ sẽ được đóng gói thành file ZIP. Nên sử dụng Wi-Fi để tải ảnh chất lượng cao.</p>
+        </dialog>
+
+        <dialog class="album-dialog selection-dialog" id="selection-dialog" aria-labelledby="selection-title">
+            <button class="album-dialog__close" type="button" data-close-dialog aria-label="Đóng">×</button>
+            <p class="eyebrow">Your selection</p>
+            <h2 id="selection-title">Gửi ảnh đã chọn</h2>
+            <p class="album-dialog__lead">Studio sẽ nhận được mã của từng ảnh để tiếp tục chỉnh sửa hoặc thiết kế album in.</p>
+            <div class="selection-preview" id="selection-preview"></div>
+            <form class="selection-form" id="selection-form">
+                <label><span>Tên của bạn</span><input name="name" type="text" value="Minh &amp; An" required /></label>
+                <label><span>Lời nhắn cho studio</span><textarea name="message" rows="3" placeholder="Ví dụ: Nhờ studio chỉnh màu tự nhiên hơn..."></textarea></label>
+                <div class="selection-form__actions">
+                    <button type="button" data-clear-favorites>Xóa lựa chọn</button>
+                    <button type="submit">Gửi cho studio <span>→</span></button>
+                </div>
+            </form>
+        </dialog>
+
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </body>
+</html>
