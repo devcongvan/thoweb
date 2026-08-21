@@ -404,19 +404,19 @@
     font-weight: 900;
 }
 
-.basic-package .deliverable-section {
+:is(.basic-package, .store-package) .deliverable-section {
     border-top: 3px solid #111;
     border-bottom: 3px solid #111;
 }
 
-.basic-package .deliverable-layout {
+:is(.basic-package, .store-package) .deliverable-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 330px;
     gap: 55px;
     align-items: start;
 }
 
-.basic-package .deliverable-lead {
+:is(.basic-package, .store-package) .deliverable-lead {
     max-width: 760px;
     margin: 24px 0 38px;
     color: #b7b7b7;
@@ -424,14 +424,14 @@
     line-height: 1.75;
 }
 
-.basic-package .deliverable-list {
+:is(.basic-package, .store-package) .deliverable-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     border-top: 2px solid #555;
     border-left: 2px solid #555;
 }
 
-.basic-package .deliverable-list article {
+:is(.basic-package, .store-package) .deliverable-list article {
     display: grid;
     grid-template-columns: 58px minmax(0, 1fr);
     gap: 18px;
@@ -451,7 +451,7 @@
     border-color: #111;
 }
 
-.basic-package .deliverable-mark {
+:is(.basic-package, .store-package) .deliverable-mark {
     display: flex;
     align-items: center;
     align-self: stretch;
@@ -465,25 +465,25 @@
     border-color: rgba(17, 17, 17, .35);
 }
 
-.basic-package .deliverable-mark b {
+:is(.basic-package, .store-package) .deliverable-mark b {
     font-size: 27px;
     line-height: 1;
 }
 
-.basic-package .deliverable-mark small {
+:is(.basic-package, .store-package) .deliverable-mark small {
     font-size: 8px;
     font-weight: 900;
     letter-spacing: .12em;
 }
 
-.basic-package .deliverable-list h3 {
+:is(.basic-package, .store-package) .deliverable-list h3 {
     margin: 0 0 11px;
     font-size: 17px;
     line-height: 1.35;
     letter-spacing: -.35px;
 }
 
-.basic-package .deliverable-list p {
+:is(.basic-package, .store-package) .deliverable-list p {
     margin: 0;
     color: #b7b7b7;
     font-size: 11px;
@@ -494,7 +494,7 @@
     color: #554d28;
 }
 
-.basic-package .renewal-costs {
+:is(.basic-package, .store-package) .renewal-costs {
     display: grid;
     gap: 8px;
     margin: 18px 0 0;
@@ -503,7 +503,7 @@
     list-style: none;
 }
 
-.basic-package .renewal-costs li {
+:is(.basic-package, .store-package) .renewal-costs li {
     display: flex;
     justify-content: space-between;
     gap: 16px;
@@ -511,12 +511,12 @@
     font-size: 9px;
 }
 
-.basic-package .renewal-costs strong {
+:is(.basic-package, .store-package) .renewal-costs strong {
     color: var(--yellow);
     text-align: right;
 }
 
-.basic-package .renewal-note {
+:is(.basic-package, .store-package) .renewal-note {
     display: block;
     margin-top: 12px;
     color: #888;
@@ -524,7 +524,7 @@
     line-height: 1.55;
 }
 
-.basic-package .studio-package-card {
+:is(.basic-package, .store-package) .studio-package-card {
     position: sticky;
     top: 108px;
     display: flex;
@@ -536,20 +536,20 @@
     box-shadow: 9px 9px var(--red);
 }
 
-.basic-package .studio-package-card > small {
+:is(.basic-package, .store-package) .studio-package-card > small {
     font-size: 8px;
     font-weight: 900;
     letter-spacing: 1.4px;
 }
 
-.basic-package .studio-package-card h3 {
+:is(.basic-package, .store-package) .studio-package-card h3 {
     margin: 25px 0 48px;
     font-size: 23px;
     line-height: 1.2;
     letter-spacing: -.8px;
 }
 
-.basic-package .studio-package-card p {
+:is(.basic-package, .store-package) .studio-package-card p {
     margin: 0 0 4px;
     color: #625b32;
     font-size: 9px;
@@ -557,7 +557,7 @@
     text-transform: uppercase;
 }
 
-.basic-package .studio-package-card > strong {
+:is(.basic-package, .store-package) .studio-package-card > strong {
     display: block;
     padding-bottom: 20px;
     border-bottom: 2px solid #111;
@@ -566,22 +566,56 @@
     letter-spacing: -2px;
 }
 
-.basic-package .studio-package-card > strong em {
+:is(.basic-package, .store-package) .studio-package-card > strong em {
     margin-left: 2px;
     font-size: 13px;
     font-style: normal;
     letter-spacing: 0;
 }
 
-.basic-package .studio-package-card > span {
+:is(.basic-package, .store-package) .studio-package-card > span {
     margin: 18px 0 28px;
     color: #625b32;
     font-size: 10px;
     line-height: 1.65;
 }
 
-.basic-package .studio-package-card .btn {
+:is(.basic-package, .store-package) .studio-package-card .btn {
     align-self: flex-start;
+}
+
+.store-package .deliverable-list .deliverable-highlight {
+    background: var(--yellow);
+    color: #111;
+    border-color: #111;
+}
+
+.store-package .deliverable-highlight .deliverable-mark {
+    border-color: rgba(17, 17, 17, .35);
+}
+
+.store-package .deliverable-highlight p {
+    color: #554d28;
+}
+
+.store-package .deliverable-list article:last-child {
+    grid-column: 1 / -1;
+    min-height: 190px;
+}
+
+.store-package .studio-package-card {
+    background: var(--red);
+    color: #fff;
+    box-shadow: 9px 9px var(--yellow);
+}
+
+.store-package .studio-package-card p,
+.store-package .studio-package-card > span {
+    color: #ffd7d2;
+}
+
+.store-package .studio-package-card > strong {
+    border-color: #fff;
 }
 
 .basic-package .basic-foundation-wrap {
@@ -775,12 +809,12 @@
         grid-template-columns: 1fr;
     }
 
-    .basic-package .deliverable-layout {
+    :is(.basic-package, .store-package) .deliverable-layout {
         grid-template-columns: 1fr;
         gap: 45px;
     }
 
-    .basic-package .studio-package-card {
+    :is(.basic-package, .store-package) .studio-package-card {
         position: static;
     }
 
@@ -865,12 +899,12 @@
         grid-column: 2;
     }
 
-    .basic-package .deliverable-lead {
+    :is(.basic-package, .store-package) .deliverable-lead {
         margin-bottom: 30px;
         font-size: 13px;
     }
 
-    .basic-package .deliverable-list {
+    :is(.basic-package, .store-package) .deliverable-list {
         grid-template-columns: 1fr;
     }
 
@@ -878,39 +912,43 @@
         grid-column: 1;
     }
 
-    .basic-package .deliverable-list article {
+    :is(.basic-package, .store-package) .deliverable-list article {
         grid-template-columns: 48px minmax(0, 1fr);
         gap: 15px;
         min-height: 0;
         padding: 21px 18px;
     }
 
-    .basic-package .deliverable-mark {
+    :is(.basic-package, .store-package) .deliverable-mark {
         min-height: 125px;
         padding-right: 12px;
     }
 
-    .basic-package .deliverable-list h3 {
+    :is(.basic-package, .store-package) .deliverable-list h3 {
         font-size: 16px;
     }
 
-    .basic-package .renewal-costs li {
+    :is(.basic-package, .store-package) .renewal-costs li {
         align-items: flex-start;
         flex-direction: column;
         gap: 2px;
     }
 
-    .basic-package .renewal-costs strong {
+    :is(.basic-package, .store-package) .renewal-costs strong {
         text-align: left;
     }
 
-    .basic-package .studio-package-card {
+    :is(.basic-package, .store-package) .studio-package-card {
         padding: 25px;
         box-shadow: 6px 6px var(--red);
     }
 
-    .basic-package .studio-package-card h3 {
+    :is(.basic-package, .store-package) .studio-package-card h3 {
         margin-bottom: 38px;
+    }
+
+    .store-package .deliverable-list article:last-child {
+        grid-column: 1;
     }
 
     .basic-package .basic-foundation-wrap {
