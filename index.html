@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Thợ Web — Làm website cho người Việt</title>
+        <title>Thợ Web — Nhận làm website</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -137,6 +137,83 @@
                     min-height: 0;
                 }
             }
+            .footer-brand {
+                max-width: 330px;
+            }
+            .footer-office {
+                display: grid;
+                grid-template-columns: 42px minmax(0, 1fr);
+                gap: 14px;
+                width: min(390px, 100%);
+                padding: 18px;
+                background: #181818;
+                border: 1px solid #3b3b3b;
+                font-style: normal;
+            }
+            .footer-office-icon {
+                display: grid;
+                width: 38px;
+                height: 38px;
+                background: var(--red);
+                color: #fff;
+                border: 2px solid #fff;
+                box-shadow: 3px 3px #555;
+                font-size: 17px;
+                place-items: center;
+            }
+            .footer-office small,
+            .footer-links small {
+                display: block;
+                color: #777;
+                font-size: 7px;
+                font-weight: 900;
+                letter-spacing: 1.4px;
+            }
+            .footer-office strong {
+                display: block;
+                margin-top: 5px;
+                color: #fff;
+                font-size: 12px;
+                line-height: 1.4;
+            }
+            .footer-office p {
+                margin: 4px 0 0;
+                color: #777;
+                font-size: 8px;
+                line-height: 1.55;
+            }
+            .footer-links {
+                display: grid;
+                gap: 10px;
+                text-align: right;
+            }
+            .footer-links div {
+                white-space: nowrap;
+            }
+            @media (max-width: 900px) {
+                .foot {
+                    flex-wrap: wrap;
+                }
+                .footer-office {
+                    order: 3;
+                    width: 100%;
+                    max-width: none;
+                }
+            }
+            @media (max-width: 600px) {
+                .footer-brand,
+                .footer-office,
+                .footer-links {
+                    width: 100%;
+                    max-width: none;
+                }
+                .footer-office {
+                    order: 0;
+                }
+                .footer-links {
+                    text-align: left;
+                }
+            }
         </style>
     </head>
     <body>
@@ -186,7 +263,7 @@
                 </div>
             </div>
         </section>
-        <div class="ticker">THỢ WEB　★　LÀM WEBSITE　★　CHO NGƯỜI VIỆT　★　GIÁ RÕ RÀNG　★　DỄ HIỂU　★　DỄ LÀM VIỆC</div>
+        <div class="ticker">THỢ WEB　★　LÀM WEBSITE　★　GIÁ RÕ RÀNG　★　DỄ HIỂU　★　DỄ LÀM VIỆC</div>
         <section class="section" id="dichvu">
             <div class="wrap">
                 <div class="heading">
@@ -240,7 +317,7 @@
                         <small>GÓI 01 / CƠ BẢN</small>
                         <h3>Web giới thiệu</h3>
                         <p>Cho cá nhân, cửa hàng và doanh nghiệp nhỏ.</p>
-                        <strong>4.900.000<em>đ</em></strong>
+                        <strong>5.900.000<em>đ</em></strong>
                         <h4 class="benefits-title">KHÁCH HÀNG NHẬN ĐƯỢC</h4>
                         <ul class="benefits-list">
                             <li><span class="benefit-icon" aria-hidden="true">🌐</span><span>Website giới thiệu sản phẩm, dịch vụ và doanh nghiệp</span></li>
@@ -248,8 +325,9 @@
                             <li><span class="benefit-icon" aria-hidden="true">📞</span><span>Gọi điện, Zalo và Facebook chỉ với một chạm</span></li>
                             <li><span class="benefit-icon" aria-hidden="true">🔎</span><span>Tối ưu SEO giúp website dễ được tìm thấy trên Google</span></li>
                             <li><span class="benefit-icon" aria-hidden="true">📸</span><span>Chụp và chỉnh sửa ảnh phục vụ website</span></li>
-                            <li><span class="benefit-icon" aria-hidden="true">🎁</span><span>Miễn phí tên miền .com và hosting trong năm đầu</span></li>
-                            <li><span class="benefit-icon" aria-hidden="true">🛠️</span><span>Hỗ trợ chỉnh sửa website trong năm đầu</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🎁</span><span>Tặng tên miền .com và hosting trong năm đầu</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🛠️</span><span>Thêm trang, chỉnh sửa website trong 1 tháng đầu</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🛡️</span><span>Bảo hành trọn đời</span></li>
                         </ul>
                         <a class="btn" href="web-basic.html">Xem chi tiết →</a>
                     </article>
@@ -257,7 +335,7 @@
                         <small>GÓI 02 / BÁN HÀNG</small>
                         <h3>Web cửa hàng</h3>
                         <p>Cho shop, cửa hàng và hộ kinh doanh.</p>
-                        <strong>9.900.000<em>đ</em></strong>
+                        <strong>12.000.000<em>đ</em></strong>
                         <h4 class="benefits-title">KHÁCH HÀNG NHẬN ĐƯỢC</h4>
                         <ul class="benefits-list">
                             <li><span class="benefit-icon" aria-hidden="true">🛒</span><span>Cửa hàng online hoàn chỉnh</span></li>
@@ -267,8 +345,9 @@
                             <li><span class="benefit-icon" aria-hidden="true">🔎</span><span>Chuẩn SEO Google</span></li>
                             <li><span class="benefit-icon" aria-hidden="true">📊</span><span>Thống kê lượt người truy cập, thời gian người dùng xem sản phẩm</span></li>
                             <li><span class="benefit-icon" aria-hidden="true">📸</span><span>Chụp và chỉnh sửa ảnh phục vụ website</span></li>
-                            <li><span class="benefit-icon" aria-hidden="true">🎁</span><span>Miễn phí tên miền .com/.vn và hosting trong năm đầu</span></li>
-                            <li><span class="benefit-icon" aria-hidden="true">🛠️</span><span>Hỗ trợ thêm trang, thêm chức năng và chỉnh sửa trong năm đầu</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🎁</span><span>Tặng tên miền .com/.vn và hosting trong năm đầu</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🛠️</span><span>Thêm trang, thêm chức năng và chỉnh sửa trong năm đầu</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🛡️</span><span>Bảo hành trọn đời</span></li>
                         </ul>
                         <a class="btn black" href="web-store.html">Xem chi tiết →</a>
                     </article>
@@ -276,7 +355,7 @@
                         <mark>NHIỀU NGƯỜI CHỌN</mark><small>GÓI 03 / STUDIO</small>
                         <h3>Web Studio</h3>
                         <p>Cho studio chụp ảnh cưới.</p>
-                        <strong>12.900.000<em>đ</em></strong>
+                        <strong>12.000.000<em>đ</em></strong>
                         <h4 class="benefits-title">KHÁCH HÀNG NHẬN ĐƯỢC</h4>
                         <ul class="benefits-list">
                             <li><span class="benefit-icon" aria-hidden="true">📸</span><span>Website mang phong cách riêng của studio</span></li>
@@ -291,9 +370,9 @@
                             <li><span class="benefit-icon" aria-hidden="true">🔎</span><span>Chuẩn SEO Google</span></li>
                             <li><span class="benefit-icon" aria-hidden="true">📊</span><span>Thống kê lượt người truy cập, thời gian người dùng xem sản phẩm</span></li>
                             <li><span class="benefit-icon" aria-hidden="true">📱</span><span>Tối ưu điện thoại, máy tính bảng và máy tính</span></li>
-                            <li><span class="benefit-icon" aria-hidden="true">📸</span><span>Chụp và chỉnh sửa ảnh phục vụ website</span></li>
-                            <li><span class="benefit-icon" aria-hidden="true">🎁</span><span>Miễn phí tên miền .com/.vn và hosting trong năm đầu</span></li>
-                            <li><span class="benefit-icon" aria-hidden="true">🛠️</span><span>Hỗ trợ thêm trang, thêm chức năng và chỉnh sửa trong năm đầu</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🎁</span><span>Tặng tên miền .com/.vn và hosting trong năm đầu</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🛠️</span><span>Thêm trang, thêm chức năng và chỉnh sửa trong năm đầu</span></li>
+                            <li><span class="benefit-icon" aria-hidden="true">🛡️</span><span>Bảo hành trọn đời</span></li>
                         </ul>
                         <a class="btn black" href="web-studio.html">Xem chi tiết →</a>
                     </article>
@@ -325,24 +404,23 @@
                         <small>03 / WEB ĐÃ LÀM</small>
                         <h2>Một vài website<br /><i>Thợ Web đã làm.</i></h2>
                     </div>
-                    <p>Có thể thay các mẫu dưới đây bằng dự án thực tế của bạn.</p>
+                    <p>Website doanh nghiệp, bán hàng và studio do Thợ Web thiết kế.</p>
                 </div>
                 <div class="projects">
-                    <article class="p1">
-                        <span>01 / BEAUTY</span><strong>AN NHIÊN<br /><i>Beauty</i></strong
-                        ><small>WEBSITE GIỚI THIỆU</small>
-                    </article>
-                    <article class="p2">
-                        <span>02 / F&B</span><strong>MỘC<br />COFFEE</strong><small>WEBSITE CỬA HÀNG</small>
-                    </article>
-                    <article class="p3">
-                        <span>03 / BUSINESS</span><strong>NỘI THẤT<br />MINH GIA</strong
-                        ><small>WEBSITE DOANH NGHIỆP</small>
-                    </article>
-                    <a class="p4" href="wedding-studio-editorial.html" target="_blank" rel="noopener">
-                        <span>04 / WEDDING STUDIO</span>
+                    <a class="project-card project-link p1" href="https://attico.vn" target="_blank" rel="noopener">
+                        <span>01 / WEB CÔNG TY</span>
+                        <strong>ATTICO<i>.VN</i></strong>
+                        <small>WEBSITE CÔNG TY IOT</small>
+                    </a>
+                    <a class="project-card project-link p2" href="demuyennghia.html" target="_blank" rel="noopener">
+                        <span>02 / WEB CỬA HÀNG</span>
+                        <strong>ĐỆM<br /><i>UYÊN NGHĨA</i></strong>
+                        <small>WEBSITE BÁN CHĂN GA GỐI ĐỆM</small>
+                    </a>
+                    <a class="project-card project-link p3" href="wedding-studio-editorial.html" target="_blank" rel="noopener">
+                        <span>03 / WEDDING STUDIO</span>
                         <strong>MỘC MIÊN<br /><i>Wedding Atelier</i></strong>
-                        <small>XEM WEBSITE DEMO EDITORIAL ↗</small>
+                        <small>WEBSITE STUDIO ẢNH CƯỚI</small>
                     </a>
                 </div>
             </div>
@@ -423,11 +501,24 @@
         </section>
         <footer>
             <div class="wrap foot">
-                <div class="logo">
-                    <b>TW</b><span>THỢ<span>WEB</span></span>
+                <div class="footer-brand">
+                    <div class="logo">
+                        <b>TW</b><span>THỢ<span>WEB</span></span>
+                    </div>
+                    <p>Website không chỉ là trang web mà còn là bộ mặt của thương hiệu<br />trên không gian mạng.</p>
                 </div>
-                <p>Website không chỉ là trang web mà còn là bộ mặt của thương hiệu<br />trên không gian mạng.</p>
-                <div><a href="#goi">Gói làm web</a>　<a href="#duan">Web đã làm</a>　<a href="#lienhe">Liên hệ</a></div>
+                <address class="footer-office">
+                    <span class="footer-office-icon" aria-hidden="true">⌖</span>
+                    <div>
+                        <small>ĐỊA CHỈ VĂN PHÒNG</small>
+                        <strong>Địa chỉ đang cập nhật</strong>
+                        <p>Thông tin địa chỉ cụ thể sẽ được bổ sung sau.</p>
+                    </div>
+                </address>
+                <div class="footer-links">
+                    <small>LIÊN KẾT NHANH</small>
+                    <div><a href="#goi">Gói làm web</a>　<a href="#duan">Web đã làm</a>　<a href="#lienhe">Liên hệ</a></div>
+                </div>
             </div>
             <div class="wrap bottom">© 2026 Thợ Web — thoweb.vn</div>
         </footer>

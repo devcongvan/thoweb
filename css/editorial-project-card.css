@@ -1,4 +1,46 @@
-.projects .p4 {
+.projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.projects .project-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 360px;
+    padding: 20px;
+    overflow: hidden;
+    border: 3px solid #111;
+    color: #fff;
+}
+
+.projects .p1 {
+    grid-row: auto;
+    height: 360px;
+    background:
+        linear-gradient(180deg, rgba(16, 34, 111, .18), rgba(16, 34, 111, .88)),
+        url("../atticovn.png") center top / cover no-repeat;
+}
+
+.projects .p2 {
+    background:
+        linear-gradient(180deg, rgba(45, 31, 23, .12), rgba(45, 31, 23, .88)),
+        url("../demuyennghia.png") center top / cover no-repeat;
+}
+
+.projects .project-link::after {
+    content: "XEM WEBSITE ↗";
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 9px 12px;
+    border: 1px solid rgba(255,255,255,.55);
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .12em;
+}
+
+.projects .p3 {
     grid-column: 1 / -1;
     position: relative;
     display: flex;
@@ -15,15 +57,15 @@
     box-shadow: 8px 8px #772b3b;
 }
 
-.projects .p4 span,
-.projects .p4 small {
+.projects .p3 span,
+.projects .p3 small {
     position: relative;
     z-index: 1;
     font-size: 8px;
     letter-spacing: 1.5px;
 }
 
-.projects .p4 strong {
+.projects .p3 strong {
     position: relative;
     z-index: 1;
     font-size: 48px;
@@ -31,15 +73,15 @@
     letter-spacing: -2px;
 }
 
-.projects .p4 strong i {
+.projects .p3 strong i {
     color: #e8bd87;
     font-family: Georgia, serif;
     font-weight: 400;
 }
 
-.projects .p4 small { font-weight: 900; }
+.projects .p3 small { font-weight: 900; }
 
-.projects .p4::after {
+.projects .p3::after {
     content: "XEM DEMO ↗";
     position: absolute;
     right: 24px;
@@ -52,11 +94,15 @@
 }
 
 @media (max-width: 900px) {
-    .projects .p4 { grid-column: auto; height: 430px; }
+    .projects { grid-template-columns: 1fr; }
+    .projects .project-card { height: 430px; }
+    .projects .p3 { grid-column: auto; height: 430px; }
 }
 
 @media (max-width: 600px) {
-    .projects .p4 { height: 350px; padding: 18px; }
-    .projects .p4 strong { font-size: 36px; }
-    .projects .p4::after { display: none; }
+    .projects .project-card { height: 350px; padding: 18px; }
+    .projects .project-link::after { display: none; }
+    .projects .p3 { height: 350px; padding: 18px; }
+    .projects .p3 strong { font-size: 36px; }
+    .projects .p3::after { display: none; }
 }
