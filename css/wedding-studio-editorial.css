@@ -40,6 +40,9 @@ address { font-style: normal; }
 .brand > span:last-child { display: flex; flex-direction: column; }
 .brand strong { color: var(--wine-deep); font-family: var(--serif); font-size: 22px; font-weight: 600; letter-spacing: .01em; line-height: .85; }
 .brand small { margin-top: 5px; font-size: 7px; font-weight: 500; letter-spacing: .23em; text-transform: uppercase; }
+.brand--placeholder .brand-mark { border-style: dashed; font-family: var(--sans); font-size: 6px; font-style: normal; font-weight: 700; letter-spacing: .08em; }
+.brand--placeholder strong { font-size: 19px; letter-spacing: .04em; text-transform: uppercase; }
+.brand--placeholder small { color: var(--muted); font-size: 6px; letter-spacing: .12em; }
 .site-header nav { display: flex; justify-content: center; gap: clamp(18px,2.5vw,39px); font-size: 9px; font-weight: 500; letter-spacing: .13em; text-transform: uppercase; }
 .site-header nav a { position: relative; padding: 8px 0; }
 .site-header nav a::after { content: ""; position: absolute; right: 0; bottom: 3px; left: 0; height: 1px; background: var(--wine); transform: scaleX(0); transform-origin: right; transition: transform .3s; }
@@ -237,6 +240,7 @@ address { font-style: normal; }
 footer { display: grid; grid-template-columns: 1fr .7fr 1fr; gap: 30px; align-items: start; padding: 65px var(--wrap-gutter) 27px; color: #fff; background: var(--ink); }
 .footer-brand .brand-mark { color: #e5bd8b; border-color: #e5bd8b; }
 .footer-brand strong { color: #fff; }
+.footer-brand.brand--placeholder small { color: rgba(255,255,255,.6); }
 footer > p { color: rgba(255,255,255,.48); font-family: var(--serif); font-size: 16px; font-style: italic; line-height: 1.4; }
 .footer-links { display: flex; justify-content: flex-end; gap: 24px; font-size: 7px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; }
 .footer-bottom { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 25px; margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.13); color: rgba(255,255,255,.38); font-size: 7px; letter-spacing: .08em; }
@@ -308,6 +312,7 @@ footer > p { color: rgba(255,255,255,.48); font-family: var(--serif); font-size:
     .demo-bar { justify-content: center; min-height: 34px; padding-top: 7px; padding-bottom: 7px; font-size: 6px; }
     .demo-bar a { display: none; }
     .brand strong { font-size: 20px; }
+    .brand--placeholder strong { font-size: 16px; }
     .section-paper { padding-top: 85px; padding-bottom: 85px; }
     .hero { padding-top: 58px; padding-bottom: 35px; }
     .hero::before { width: 24%; }

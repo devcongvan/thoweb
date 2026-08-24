@@ -122,6 +122,22 @@ textarea:focus-visible {
     place-items: center;
 }
 
+.brand-placeholder .brand-mark {
+    border-style: dashed;
+    font-family: var(--sans);
+    font-size: 6px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.brand-placeholder strong {
+    text-transform: uppercase;
+}
+
+.brand-placeholder small {
+    opacity: 0.72;
+}
+
 .paper-texture {
     background:
         radial-gradient(circle at 8% 13%, rgba(122, 38, 53, 0.045) 0 1px, transparent 1.5px),
@@ -1866,7 +1882,7 @@ dialog::backdrop {
         flex-basis: 34px;
         width: 34px;
         height: 34px;
-        font-size: 20px;
+        font-size: 6px;
     }
 
     .studio-brand strong {

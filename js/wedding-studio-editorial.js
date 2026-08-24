@@ -76,8 +76,8 @@
             if (!lightbox || !lightboxImage || !lightboxCaption) return;
             lightboxTrigger = button;
             lightboxImage.src = button.dataset.lightbox;
-            lightboxImage.alt = button.querySelector("img")?.alt || "Ảnh bộ sưu tập Mộc Miên";
-            lightboxCaption.textContent = button.dataset.caption || "Mộc Miên Wedding Atelier";
+            lightboxImage.alt = button.querySelector("img")?.alt || "Ảnh bộ sưu tập của studio";
+            lightboxCaption.textContent = button.dataset.caption || "Tên Studio · Wedding Photography";
             lightbox.classList.add("is-open");
             lightbox.setAttribute("aria-hidden", "false");
             document.body.classList.add("no-scroll");
