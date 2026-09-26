@@ -388,7 +388,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .gallery-item--wide { grid-column: span 2; height: 226px; }
 .gallery-item:nth-child(1) img { object-position: 55% center; }
 .gallery-item:nth-child(2) img { object-position: 48% 25%; }
-.gallery-item:nth-child(6) img { object-position: 60% center; }
+.gallery-item:nth-child(6) img { object-position: 40% center; }
 .gallery-section__note { margin-top: 19px; color: rgba(255,255,255,.45); font-family: var(--serif); font-size: 12px; font-style: italic; text-align: center; }
 
 .rsvp-section { position: relative; padding: 87px 23px 99px; overflow: hidden; color: var(--white); background: var(--wine); }
