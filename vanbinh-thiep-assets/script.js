@@ -201,3 +201,81 @@
     if (event.key === "ArrowRight") stepLightbox(1);
   });
 })();
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var audio = document.getElementById('bg-music');
+  var musicBtn = document.getElementById('music-btn');
+  var icon = musicBtn ? musicBtn.querySelector('i') : null;
+  var isPlaying = false;
+
+  // Hàm phát nhạc
+  function playMusic() {
+    if (!audio) return;
+
+    audio.play().then(function() {
+      isPlaying = true;
+      if (musicBtn) musicBtn.classList.add('playing');
+      if (icon) {
+        icon.classList.remove('fa-volume-xmark');
+        icon.classList.add('fa-music');
+      }
+      // Bỏ lắng nghe các sự kiện tự động phát khi nhạc đã chạy thành công
+      removeInteractionListeners();
+    }).catch(function(error) {
+      console.log("Trình duyệt chặn Autoplay, chờ người dùng tương tác:", error);
+    });
+  }
+
+  // Hàm dừng nhạc
+  function pauseMusic() {
+    if (!audio) return;
+
+    audio.pause();
+    isPlaying = false;
+    if (musicBtn) musicBtn.classList.remove('playing');
+    if (icon) {
+      icon.classList.remove('fa-music');
+      icon.classList.add('fa-volume-xmark');
+    }
+  }
+
+  // Tự động kích hoạt khi có tương tác đầu tiên
+  function autoPlayOnFirstInteraction() {
+    if (!isPlaying) {
+      playMusic();
+    }
+  }
+
+  // Hàm lắng nghe sự kiện tương tác
+  function addInteractionListeners() {
+    ['click', 'touchstart', 'scroll', 'keydown'].forEach(function(eventType) {
+      document.addEventListener(eventType, autoPlayOnFirstInteraction, { passive: true });
+    });
+  }
+
+  // Hàm gỡ bỏ sự kiện tương tác
+  function removeInteractionListeners() {
+    ['click', 'touchstart', 'scroll', 'keydown'].forEach(function(eventType) {
+      document.removeEventListener(eventType, autoPlayOnFirstInteraction);
+    });
+  }
+
+  // 1. Lắng nghe các tương tác đầu tiên của người dùng
+  addInteractionListeners();
+
+  // 2. Thử phát nhạc ngay lập tức khi vừa vào trang
+  playMusic();
+
+  // 3. Nút Bật/Tắt thủ công
+  if (musicBtn) {
+    musicBtn.addEventListener('click', function(e) {
+      e.stopPropagation(); // Ngăn sự kiện click lan ra ngoài document
+      if (isPlaying) {
+        pauseMusic();
+      } else {
+        playMusic();
+      }
+    });
+  }
+});
