@@ -163,7 +163,7 @@
         <form class="rsvp-form reveal" id="rsvp-form">
           <label><span>Tên của bạn</span><input name="name" type="text" placeholder="Nhập họ và tên" autocomplete="name" required></label>
           <label><span>Bạn sẽ tham dự?</span><select name="attendance" required><option value="" selected disabled>Chọn lời hồi đáp</option><option value="yes">Mình sẽ đến chung vui</option><option value="no">Rất tiếc, mình không thể đến</option></select></label>
-          <div class="rsvp-form__row"><label><span>Nơi tham dự</span><select name="event"><option>Tiệc cưới nhà trai</option><option>Tiệc cưới nhà gái</option><option>Lễ thành hôn</option><option>Lễ vu quy</option></select></label><label><span>Số khách</span><select name="guests"><option>1 người</option><option>2 người</option><option>3 người</option><option>4 người</option><option>5 người</option></select></label></div>
+          <div class="rsvp-form__row"><label><span>Nơi tham dự</span><select name="location" required><option>Tiệc cưới nhà trai</option><option>Tiệc cưới nhà gái</option><option>Lễ thành hôn</option><option>Lễ vu quy</option></select></label><label><span>Số khách</span><select name="guests"><option>1 người</option><option>2 người</option><option>3 người</option><option>4 người</option><option>5 người</option></select></label></div>
           <label><span>Lời nhắn gửi</span><textarea name="message" rows="3" placeholder="Gửi một lời chúc đến hai vợ chồng..."></textarea></label>
           <button class="primary-button" type="submit"><span>Gửi xác nhận</span><b>→</b></button>
         </form>
@@ -204,55 +204,5 @@
   <div id="music-btn" class="music-toggle-btn">
     <i class="fa-solid fa-music"></i>
   </div>
-  <script>
-(function () {
-  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwjVjtHfwgil5onYs9lNSPZ7DsSJVoOTsOzvDaQ1T6Q3kEeCSRiW6fi55lgv5Vqr76wyw/exec';
-  const TOKEN = 'abcabc123'; // phải khớp trong Apps Script
-
-  const form = document.getElementById('rsvp-form');
-//   const statusEl = document.getElementById('rsvp-status');
-  const submitBtn = form.querySelector('button[type="submit"]');
-
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    const fd = new FormData(form);
-
-    const data = {
-      token: TOKEN,
-      name: fd.get('name'),
-      attendance: fd.get('attendance'),
-      event: fd.get('event'),
-      guests: fd.get('guests'),
-      message: fd.get('message')
-    };
-
-    // statusEl.textContent = 'Đang gửi...';
-    console.log('Đang gửi ...');
-    submitBtn.disabled = true;
-
-    try {
-      const res = await fetch(ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify(data)
-      });
-      const result = await res.json();
-
-      if (result.status === 'ok') {
-        console.log('Cảm ơn bạn đã gửi xác nhận! 💍');
-        // statusEl.textContent = 'Cảm ơn bạn đã gửi xác nhận! 💍';
-        form.reset();
-      } else {
-        console.log('Có lỗi: ' + (result.message || 'vui lòng thử lại.'));
-        // statusEl.textContent = 'Có lỗi: ' + (result.message || 'vui lòng thử lại.');
-      }
-    } catch (err) {
-    //   statusEl.textContent = 'Không gửi được, bạn kiểm tra mạng rồi thử lại nhé.';
-    } finally {
-      submitBtn.disabled = false;
-    }
-  });
-})();
-</script>
 </body>
 </html>

@@ -90,21 +90,48 @@
 
   const rsvpForm = document.querySelector("#rsvp-form");
   if (rsvpForm) {
-    rsvpForm.addEventListener("submit", (event) => {
+    const endpoint = "https://script.google.com/macros/s/AKfycbzHXOWcCHotttkU9HmW03kgJPAh2WXiVeGquLORFV5HS-Wg7JKcINQMk26ycciLg0J42A/exec";
+    const token = "abcabc123";
+    const submitButton = rsvpForm.querySelector('button[type="submit"]');
+    const submitLabel = submitButton?.querySelector("span");
+    const idleLabel = submitLabel?.textContent || "Gửi xác nhận";
+
+    rsvpForm.addEventListener("submit", async (event) => {
       event.preventDefault();
       if (!rsvpForm.reportValidity()) return;
 
-      const data = Object.fromEntries(new FormData(rsvpForm).entries());
-      data.savedAt = new Date().toISOString();
-
+      const formData = new FormData(rsvpForm);
+      const data = {
+        token,
+        name: formData.get("name"),
+        attendance: formData.get("attendance"),
+        location: formData.get("location"),
+        guests: formData.get("guests"),
+        message: formData.get("message")
+      };
+      if (submitButton) submitButton.disabled = true;
+      if (submitLabel) submitLabel.textContent = "Đang gửi...";
       try {
-        localStorage.setItem("wedding-rsvp-thanh-tuan-do-ngan", JSON.stringify(data));
-      } catch (error) {
-        console.info("Không thể lưu RSVP trên thiết bị này.", error);
-      }
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(data)
+        });
+        if (!response.ok) throw new Error(`Máy chủ trả về lỗi ${response.status}.`);
 
-      showToast(`Cảm ơn ${data.name}! Phản hồi của bạn đã được ghi nhận trên thiết bị này.`);
-      rsvpForm.reset();
+        const result = await response.json();
+        if (result.status !== "ok") {
+          throw new Error(result.message || "Không thể lưu phản hồi vào Google Sheet.");
+        }
+        showToast(`Cảm ơn ${data.name}! Xác nhận tham dự của bạn đã được gửi.`);
+        rsvpForm.reset();
+      } catch (error) {
+        console.error("Không thể gửi RSVP lên Google Sheet.", error);
+        showToast(`Gửi xác nhận chưa thành công. ${error.message || "Vui lòng thử lại."}`);
+      } finally {
+        if (submitButton) submitButton.disabled = false;
+        if (submitLabel) submitLabel.textContent = idleLabel;
+      }
     });
   }
 
