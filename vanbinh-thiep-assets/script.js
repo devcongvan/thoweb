@@ -109,12 +109,18 @@
   }
 
   const modal = document.querySelector("#gift-modal");
+  const qrModal = document.querySelector("#qr-modal");
+  const qrImage = qrModal?.querySelector(".qr-modal__image");
+  const qrTitle = qrModal?.querySelector("#qr-title");
+  const qrError = qrModal?.querySelector(".qr-modal__error");
   let lastFocusedElement = null;
+  let activeQrTrigger = null;
 
   const setModal = (open) => {
     if (!modal) return;
     modal.classList.toggle("is-open", open);
     modal.setAttribute("aria-hidden", String(!open));
+    modal.setAttribute("aria-modal", String(open));
     document.body.classList.toggle("modal-open", open);
 
     if (open) {
@@ -130,6 +136,45 @@
   });
   document.querySelectorAll("[data-close-modal]").forEach((button) => {
     button.addEventListener("click", () => setModal(false));
+  });
+
+  const closeQrModal = () => {
+    if (!qrModal || !modal) return;
+    qrModal.classList.remove("is-open");
+    qrModal.setAttribute("aria-hidden", "true");
+    qrModal.setAttribute("aria-modal", "false");
+    modal.setAttribute("aria-hidden", "false");
+    modal.setAttribute("aria-modal", "true");
+    activeQrTrigger?.focus();
+  };
+
+  document.querySelectorAll("[data-open-qr]").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!qrModal || !qrImage || !qrTitle || !qrError) return;
+      activeQrTrigger = button;
+      qrTitle.textContent = button.dataset.qrName;
+      qrImage.alt = `Mã QR mừng cưới ${button.dataset.qrName}`;
+      qrImage.hidden = false;
+      qrError.hidden = true;
+      qrImage.onerror = () => {
+        qrImage.hidden = true;
+        qrError.hidden = false;
+      };
+      qrImage.onload = () => {
+        qrImage.hidden = false;
+        qrError.hidden = true;
+      };
+      qrImage.src = button.dataset.qrSrc;
+      modal.setAttribute("aria-hidden", "true");
+      modal.setAttribute("aria-modal", "false");
+      qrModal.classList.add("is-open");
+      qrModal.setAttribute("aria-hidden", "false");
+      qrModal.setAttribute("aria-modal", "true");
+      qrModal.querySelector(".modal__close")?.focus();
+    });
+  });
+  document.querySelectorAll("[data-close-qr]").forEach((button) => {
+    button.addEventListener("click", closeQrModal);
   });
 
   const galleryButtons = [...document.querySelectorAll("[data-gallery-index]")];
@@ -194,6 +239,7 @@
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       if (lightbox?.classList.contains("is-open")) closeLightbox();
+      else if (qrModal?.classList.contains("is-open")) closeQrModal();
       else if (modal?.classList.contains("is-open")) setModal(false);
     }
     if (!lightbox?.classList.contains("is-open")) return;
