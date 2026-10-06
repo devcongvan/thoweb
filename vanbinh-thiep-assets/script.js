@@ -213,7 +213,7 @@
   const lightboxImage = lightbox?.querySelector("figure img");
   const lightboxCaption = lightbox?.querySelector("figcaption");
   let activeImageIndex = 0;
-  let touchStartX = 0;
+  let touchStartX = null;
 
   const renderLightboxImage = () => {
     const item = galleryImages[activeImageIndex];
@@ -256,11 +256,19 @@
     if (event.target === lightbox) closeLightbox();
   });
   lightbox?.addEventListener("touchstart", (event) => {
-    touchStartX = event.changedTouches[0].clientX;
+    if (event.touches.length !== 1 || event.target.closest("figure")) {
+      touchStartX = null;
+      return;
+    }
+    touchStartX = event.touches[0].clientX;
   }, { passive: true });
   lightbox?.addEventListener("touchend", (event) => {
+    if (touchStartX === null) return;
     const distance = event.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(distance) > 45) stepLightbox(distance > 0 ? -1 : 1);
+    touchStartX = null;
+    if (event.changedTouches.length === 1 && Math.abs(distance) > 45) {
+      stepLightbox(distance > 0 ? -1 : 1);
+    }
   }, { passive: true });
 
   document.addEventListener("keydown", (event) => {

@@ -384,8 +384,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .gallery-item:active::after { transform: scale(.9); }
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
 .gallery-item:hover img { transform: scale(1.04); }
-.gallery-item--tall { grid-row: span 2; }
-.gallery-item--wide { grid-column: span 2; height: 226px; }
+.gallery-item--tall, .gallery-item--wide { grid-column: auto; grid-row: auto; height: auto; }
 .gallery-item:nth-child(1) img { object-position: 55% center; }
 .gallery-item:nth-child(2) img { object-position: 48% 25%; }
 .gallery-item:nth-child(6) img { object-position: 40% center; }
